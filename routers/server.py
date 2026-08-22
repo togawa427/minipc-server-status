@@ -23,7 +23,7 @@ async def get_status_by_name(server_name: str=Path()):
     status = ""
     if(server_name == "valheim"):
         # ポート検索
-        port = 3030
+        port = 2457
         with socket.socket(socket.AF_INET, socket.SOCK_STREAM) as s:
             s.settimeout(1)
             result = s.connect_ex((host, port))
