@@ -65,7 +65,7 @@ async def get_status():
     return Status(
         memory_total_mb=memory_total_mb,
         memory_usage_mb=memory_usage_mb,
-        cpu_usage_percent=int(psutil.cpu_percent(interval=1)),
+        cpu_usage_percent=int(psutil.cpu_percent(interval=0.5)),
         app_servers= app_statuses
     )
 
